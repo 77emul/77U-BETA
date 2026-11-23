@@ -1,0 +1,23 @@
+77U standard cover model — Real-ESRGAN general x4v3
+
+The normal-quality Core ML model is a blend of two official checkpoints,
+25% general and 75% weak-denoise. 77U uses a compiled Core ML conversion
+with FP16 and 8-bit weight palettization. The original project license is
+reproduced in RealESRGAN-LICENSE.txt.
+
+Upstream release and BSD-3-Clause license
+https://github.com/xinntao/Real-ESRGAN/releases/tag/v0.2.5.0
+https://github.com/xinntao/Real-ESRGAN/blob/v0.2.5.0/LICENSE
+
+Original checkpoints and SHA-256
+realesr-general-x4v3.pth
+8dc7edb9ac80ccdc30c3a5dca6616509367f05fbc184ad95b731f05bece96292
+realesr-general-wdn-x4v3.pth
+1641f8c4464b9f097c9fdda5589273713f67cf59f3d909e0bd688f0cee269dca
+
+Compiled standard model, weights/weight.bin SHA-256
+67a01674b4a2c2835439599627304585b0d73072d07742ab3dad20aee88ca991
+
+All 34 convolution tensors map to the upstream blend. All convolution
+biases and the unpalettized convolution match at FP16 precision. The
+palettized tensors have a maximum relative L2 error below 0.009.

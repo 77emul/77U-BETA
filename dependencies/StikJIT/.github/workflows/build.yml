@@ -1,0 +1,64 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+    tags: ['*']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build XCFramework
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Show toolchain
+        run: xcodebuild -version
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Build framework
+        run: |
+          xcodebuild archive \
+            -project StikJIT.xcodeproj \
+            -scheme StikJIT \
+            -destination 'generic/platform=iOS' \
+            -archivePath build/StikJIT-iOS \
+            SKIP_INSTALL=NO \
+            BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Assemble XCFramework
+        run: |
+          xcodebuild -create-xcframework \
+            -framework build/StikJIT-iOS.xcarchive/Products/Library/Frameworks/StikJIT.framework \
+            -output StikJIT.xcframework
+
+      - name: Zip XCFramework
+        run: zip -ry StikJIT.xcframework.zip StikJIT.xcframework
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: StikJIT.xcframework
+          path: StikJIT.xcframework.zip
+          if-no-files-found: error
+
+      - name: Create release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: StikJIT.xcframework.zip
+          generate_release_notes: true

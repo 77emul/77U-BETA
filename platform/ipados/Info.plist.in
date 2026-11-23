@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>77UCoverModelDownloadURL</key>
+    <string>@CEMUIOS_COVER_MODEL_URL_XML@</string>
+	<key>MetalCaptureEnabled</key>
+	<@CEMUIOS_METAL_CAPTURE_PLIST_VALUE@/>
+    <key>LSApplicationQueriesSchemes</key><array><string>stikdebug</string><string>localdevvpn</string></array>
+    <key>CFBundleURLTypes</key>
+    <array><dict>
+        <key>CFBundleURLName</key><string>77U JIT return</string>
+        <key>CFBundleURLSchemes</key><array><string>cemu77u-jit</string></array>
+    </dict></array>
+    <key>NSLocalNetworkUsageDescription</key><string>Connect to this device through LocalDevVPN to enable JIT.</string>
+	<key>NSBonjourServices</key>
+	<array><string>_remotepairing._tcp</string></array>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>77U</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>Wii U Game Archive</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>org.cemu.wua</string>
+				<string>org.cemu.wud</string>
+				<string>org.cemu.wux</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>${MACOSX_BUNDLE_SHORT_VERSION_STRING}</string>
+	<key>CemuIOSReleaseName</key>
+	<string>@CEMUIOS_RELEASE_NAME@</string>
+	<key>CFBundleVersion</key>
+	<string>${MACOSX_BUNDLE_BUNDLE_VERSION}</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.games</string>
+	<key>LSSupportsGameMode</key>
+	<true/>
+	<key>GCSupportsControllerUserInteraction</key>
+	<true/>
+	<key>GCSupportedGameControllers</key>
+	<array>
+		<dict><key>ProfileName</key><string>ExtendedGamepad</string></dict>
+		<dict><key>ProfileName</key><string>MicroGamepad</string></dict>
+	</array>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>NSMotionUsageDescription</key>
+	<string>77U uses device motion for Wii U GamePad aiming and tilt controls when you enable it.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>77U uses the device or connected headset microphone as the Wii U GamePad microphone.</string>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array><string>public.data</string></array>
+			<key>UTTypeDescription</key>
+			<string>Wii U Game Archive</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.cemu.wua</string>
+			<key>UTTypeTagSpecification</key>
+			<dict><key>public.filename-extension</key><array><string>wua</string></array></dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array><string>public.data</string></array>
+			<key>UTTypeDescription</key>
+			<string>Wii U Disc Image</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.cemu.wud</string>
+			<key>UTTypeTagSpecification</key>
+			<dict><key>public.filename-extension</key><array><string>wud</string></array></dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array><string>public.data</string></array>
+			<key>UTTypeDescription</key>
+			<string>Compressed Wii U Disc Image</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.cemu.wux</string>
+			<key>UTTypeTagSpecification</key>
+			<dict><key>public.filename-extension</key><array><string>wux</string></array></dict>
+		</dict>
+	</array>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>arm64</string>
+		<string>metal</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>SystemBackgroundColor</string>
+	</dict>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<true/>
+		<key>UISceneConfigurations</key>
+		<dict>
+			<key>UIWindowSceneSessionRoleExternalDisplayNonInteractive</key>
+			<array>
+				<dict>
+					<key>UISceneConfigurationName</key>
+					<string>77U External Display</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).ExternalDisplaySceneDelegate</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+</dict>
+</plist>

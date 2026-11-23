@@ -1,0 +1,39 @@
+{
+  "name": "cemu",
+  "version-string": "1.0",
+  "builtin-baseline": "f0fb3ddba5135b80982668de39dbaa139c00d281",
+  "dependencies": [
+    "pugixml",
+    "zlib",
+    "zstd",
+    {
+      "name": "libzip",
+      "default-features": false
+    },
+    "boost-container",
+    "boost-program-options",
+    "boost-nowide",
+    "boost-algorithm",
+    "boost-functional",
+    "boost-signals2",
+    "boost-asio",
+    "boost-ptr-container",
+    "boost-property-tree",
+    "boost-static-string",
+    "boost-random",
+    {
+      "name": "fmt",
+      "version>=": "12.1.0"
+    },
+    "libpng",
+    "glm",
+    "openssl",
+    {
+      "name": "curl",
+      "default-features": false,
+      "features": [
+        "openssl"
+      ]
+    }
+  ]
+}

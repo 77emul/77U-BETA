@@ -1,0 +1,9 @@
+FPS++ by Xalphenos, rajkosto, epigramx, Crementif, leoetlino, Pig and Exzap.
+
+Source: https://github.com/cemu-project/cemu_graphic_packs/releases/tag/Github989
+Archive: graphicPacks989.zip
+Archive SHA-256: 72b4708a476a810990a3ee1026efc2a7b1c133d4e467eb8d8ebc23c436a03cbb
+Included directory: BreathOfTheWild/Mods/FPS++
+License: CC0 1.0 Universal; see Cemu-Graphic-Packs-CC0.txt.
+
+77U changes: enable the pack by default; select Advanced Settings and Accurate Fence by default. Both FPS limits remain 60. Assembly patches are unmodified.

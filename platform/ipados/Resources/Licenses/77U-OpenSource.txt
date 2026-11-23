@@ -1,0 +1,35 @@
+77U - Open-source notices
+
+77U is an independent modified Cemu port. It is not an official release or endorsement by Cemu, StikDebug, or Nintendo.
+
+Cemu: MPL-2.0. https://github.com/cemu-project/Cemu
+StikJIT: MPL-2.0. https://github.com/StikDebug/StikJIT
+Revision 3623e725876f76aecb0520582ad6194bacb15d39
+StikDebug scripts universal.js and legacy.js: AGPL-3.0.
+Source included in dependencies/StikJIT/Resources at StikJIT revision above.
+StikDebug comparison revision: 7a80dfce28eeb501faca6498d1746949ac921e74
+https://github.com/StikDebug/StikDebug/tree/7a80dfce28eeb501faca6498d1746949ac921e74/StikDebug/Scripts
+At that revision legacy.js is identical. The copy of universal.js in
+StikJIT uses LOG_INFO where the StikDebug copy uses LOG_VERBOSE.
+idevice: MIT, copyright 2026 Jackson Coxson.
+https://github.com/jkcoxson/idevice
+Cemu community graphic packs: CC0-1.0.
+https://github.com/cemu-project/cemu_graphic_packs
+Distribution of binary releases
+
+77U binary releases are conveyed as a combined work under GNU AGPL
+version 3. For this combined distribution, the MPL-2.0-covered source is
+also available under AGPL-3.0 under MPL-2.0 section 3.3. Original MPL
+grants and notices are preserved. The bundled JIT scripts remain under
+AGPL-3.0. Third-party components retain their respective licenses and
+copyright notices in this directory.
+
+The complete corresponding source for each build is attached to its
+release on https://github.com/77emul/77U-BETA/releases. BUILD.md lists the build
+and packaging steps and the exact upstream revisions used by them.
+
+Working with this source
+
+This project is open source, not public domain. You may study it, modify it, contribute improvements and redistribute it only under the license that applies to each file or component. Keep copyright, license and attribution notices intact. Clearly identify your changes, provide corresponding source when the applicable license requires it, and do not present a modified build as an official or endorsed release.
+
+Do not copy code into a closed project when its license requires source disclosure. Do not redistribute games, encryption keys, firmware, system files, copyrighted artwork or branding with the app. Contributions should be reviewable, documented and compatible with the upstream licenses. The full license texts in this screen control if this summary differs from them.
